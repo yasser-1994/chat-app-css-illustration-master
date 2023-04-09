@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+/* ## Colors */
+
+/* ### Primary */
+
+/* #### Text */
+:root {
+  /* (sub-heading at the top of the app UI) */
+  --Pale-Violet: hsl(276, 100%, 81%);
+  /* (chat on the left) */
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  /* (chat on the right)*/
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  /* (placeholder text) */
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  /* (main heading) */
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /* (paragraph) */
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+
+  /* #### Gradients */
+  /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+
+  /* ### Secondary */
+  --White: hsl(0, 0%, 100%);
+  /* (app background) */
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  /* (submit button background) */
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  /* (radio button outline) */
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+body {
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+body {
+  background-color: var(--Light-Grayish-Violet);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  width: 40%;
+  height: 85vh;
+  left: -11rem;
+  top: 0;
+  background: linear-gradient(var(--Light-Violet), var(--Light-Magenta));
+}
+
+.sec-flex {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  position: relative;
+  z-index: 5;
+}
+
+.app-mob {
+  background-color: var(--Light-Grayish-Violet);
+  border-radius: 35px;
+  border: 0.8rem solid var(--White);
+  box-shadow: 9px 7px 9px 0px #c3c2cd85;
+}
+
+.app-mob .heading {
+  width: 100%;
+  background: linear-gradient(var(--Light-Violet), var(--Light-Magenta));
+  position: relative;
+  color: white;
+  padding: 26px 10px 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.app-mob .heading::after {
+  content: "";
+  position: absolute;
+  height: 25%;
+  width: 60%;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--White);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.app-mob .head-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-mob .heading .head-main .image {
+  width: 25px;
+  height: 25px;
+}
+
+.app-mob .heading .head-main .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.app-mob .heading .head-main .name {
+  font-size: 11px;
+  margin-right: 3rem;
+}
+
+.app-mob .heading .head-main .name p {
+  margin: 3px 0;
+}
+
+.app-mob .heading .head-main .name p:last-child {
+  color: var(--Grayish-Blue);
+  font-size: 10px;
+}
+
+/*  */
+.app-mob .main-chat {
+  padding: 0 5px;
+}
+
+.app-mob .main-chat p {
+  padding: 6px 10px;
+  border-radius: 10px 10px 10px 3px;
+  font-size: 9px;
+  background-color: #c3c2cd82;
+  width: fit-content;
+  color: var(--Moderate-Violet);
+  margin: 12px 0;
+  box-shadow: 1px 1px 3px 0px hsl(270, 7%, 64%);
+}
+
+.app-mob .main-chat .photos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app-mob .main-chat .photos img {
+  height: 40px;
+  width: 40px;
+  margin: 0 5px 0 0;
+  border-radius: 10px;
+}
+
+.app-mob .main-chat .right-chat {
+  text-align: -webkit-right;
+}
+
+.app-mob .main-chat .right-chat p {
+  background-color: var(--White);
+  color: var(--Dark-Grayish-Violet);
+  box-shadow: 2px 2px 3px hsl(206, 6%, 79%);
+}
+
+.app-mob .main-chat .price .div-price {
+  padding: 10px 10px;
+  border-radius: 10px 10px 10px 3px;
+  font-size: 9px;
+  background: linear-gradient(var(--Light-Violet), var(--Light-Magenta));
+  color: var(--White);
+  width: 80%;
+  margin: 7px 0;
+  box-shadow: 1px 1px 3px 0px hsl(270, 7%, 64%);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.app-mob .main-chat .div-price .circle {
+  margin-right: 0.8rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--Dark-Grayish-Violet);
+}
+
+.app-mob .main-chat .div-price .price p {
+  padding: 10px;
+  border-radius: 10px 10px 10px 3px;
+  font-size: 9px;
+  background-color: var(--Pale-Violet);
+  width: fit-content;
+  color: var(--Moderate-Violet);
+  margin: 0;
+  box-shadow: 1px 1px 3px 0px hsl(270, 7%, 64%);
+}
+
+.app-mob .main-chat .div-price span:last-child {
+  position: absolute;
+  right: 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 10px 5px;
+  margin: 8px;
+  background-color: var(--White);
+  justify-content: space-around;
+}
+
+.btn input {
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  background-color: var(--White);
+}
+
+.btn input::placeholder {
+  color: var(--Grayish-Blue);
+}
+
+.btn svg {
+  color: var(--Very-Dark-Desaturated-Violet);
+}
+
+/*  */
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  color: var(--Desaturated-Dark-Violet);
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 25px;
+  padding-right: 4rem;
+  color: var(--Dark-Grayish-Violet);
+}
+
+/*  */
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  body::after {
+    border-bottom-left-radius: 0% 0%;
+    border-bottom-right-radius: 100% 50%;
+    width: 50%;
+    height: 60vh;
+    left: 0;
+  }
+  .sec-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  .content p {
+    font-size: 15px;
+    padding: 0 1rem;
+    color: var(--Dark-Grayish-Violet);
+    text-align: center;
+
+  }
+}
+
+@media (min-width: 577px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .app-mob .main-chat p {
+    margin: 5px 0;
+    font-size: 7px;
+  }
+  .app-mob .main-chat .price .div-price {
+    margin: 3px 0;
+    padding: 7px 7px;
+  }
+  .btn {
+    padding: 7px 5px;
+    margin: 8px;
+  }
+  .content h1 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  .content p {
+    font-size: 10px;
+  }
+}
